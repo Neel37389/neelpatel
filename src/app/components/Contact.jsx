@@ -55,7 +55,7 @@ export default function Contact() {
             target="_blank"
             className="px-6 py-2 rounded-full border border-(--muted)] text-(--foreground)] text-sm font-medium hover:border-white hover:text-white hover:bg-(--muted) transition-colors"
           >
-            Linkedin
+            LinkedIn
           </a>
         </motion.div>
       </div>
