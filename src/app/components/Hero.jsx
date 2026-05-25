@@ -9,7 +9,6 @@ export default function Hero() {
       className="min-h-screen flex items-center justify-center px-4 sm:px-8"
     >
       <div className="max-w-4xl mx-auto space-y-8">
-        {/* Animated greeting */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -25,19 +24,37 @@ export default function Hero() {
           </p>
         </motion.div>
 
-        {/* Name with underline effect */}
-        <motion.h1
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight"
-          style={{ color: "var(--foreground)" }}
+          className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8"
         >
-          Neel Patel
-          <div className="h-1 w-24 bg-white mt-4 rounded-full"></div>
-        </motion.h1>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden border-4 border-white/20">
+              <img
+                src="/neel-photo.png"
+                alt="Neel Patel"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </motion.div>
 
-        {/* Description with highlighted words */}
+          <div>
+            <h1
+              className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight"
+              style={{ color: "var(--foreground)" }}
+            >
+              Neel Patel
+            </h1>
+            <div className="h-1 w-24 bg-white mt-4 rounded-full"></div>
+          </div>
+        </motion.div>
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -92,7 +109,6 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -117,7 +133,6 @@ export default function Hero() {
           </a>
         </motion.div>
 
-        {/* Scroll indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
